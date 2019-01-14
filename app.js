@@ -1,9 +1,10 @@
 const express = require('express');
-
+const authRoute = require('./routes/auth_routes');
 const app = express();
 
 app.set('view engine','ejs');
 
+app.use('/auth',authRoute);
 app.get('/',(req,res)=>{
     // res.send({
     //     name:"Rewant"
