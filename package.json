@@ -1,0 +1,29 @@
+{
+  "name": "oauth-passport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rewantkedia/OAuth-Passport.git"
+  },
+  "author": "rewant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rewantkedia/OAuth-Passport/issues"
+  },
+  "homepage": "https://github.com/rewantkedia/OAuth-Passport#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
