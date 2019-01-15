@@ -1,17 +1,21 @@
 const router = require('express').Router();
-
+const passport = require('passport');
 router.get('/login',(req,res)=>{
     res.render('login');
 });
 
-router.get('/google',(req,res)=>{
-    //handle passport
-    res.send('Logging with google');
-});
+
+//auth with google
+router.get('/google',passport.authenticate('google',{
+    scope: ['profile']
+}));
 
 router.get('/logout',(req,res)=>{
     //handle with passport
     res.send('logging out');
 })
-
+  
+router.get('/google/redirect',passport.authenticate('google'),(req,res)=>{
+    res.send('We are Here');
+})
 module.exports = router;
