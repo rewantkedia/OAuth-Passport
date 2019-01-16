@@ -1,5 +1,6 @@
 const express = require('express');
 const authRoute = require('./routes/auth_routes');
+const profileRoute = require('./routes/profile_routes');
 const passportSetup = require('./config/passport-setup');
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
@@ -21,6 +22,7 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/auth',authRoute);
+app.use('/profile',profileRoute);
 app.get('/',(req,res)=>{
     // res.send({
     //     name:"Rewant"
@@ -32,3 +34,4 @@ const port = 3000;
 app.listen(port,function(){
     console.log('We are live on port '+port);
 });
+

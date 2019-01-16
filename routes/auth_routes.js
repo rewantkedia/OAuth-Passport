@@ -18,6 +18,7 @@ router.get('/logout',(req,res)=>{
 router.get('/google/redirect',passport.authenticate('google'),(req,res)=>{
     //req.user gives the details of the user logged in.
     // res.send('We are Here');
-    res.send(req.user);
+    // res.send(req.user);
+    res.redirect('/profile/');
 })
 module.exports = router;
